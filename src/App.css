@@ -1,42 +1,168 @@
+/*! ------- Applies to All Pages ------- */
+html {
+  background-image: url(./assets/stadiumBackgroundImage2.jpg);
+  background-size: 1900px;
+  background-attachment: fixed;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin-top: 15px;
+}
+.playerDetailsPhoto > img {
+  width: 250px;
+  border-radius: 25px;
+}
+/*! ------- PlayerTiles.jsx Styling ------- */
+.addNewPlayerButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent;
+}
+.newPlayerButton {
+  background-color: #1e4775ec;
+  color: #f6b40dec;
+  font-size: large;
+  font-weight: bold;
+}
+.newPlayerButton {
+  font-size: medium;
+}
+.allPlayerTilesDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.playerTileImage {
+  width: 200px;
+  border-radius: 25px;
+  margin: 15px;
+}
+.dogPlayerTiles:nth-child(even) {
+  background-color: #f6b40dc0;
+  color: black;
+  margin: 25px;
   text-align: center;
+  border-radius: 25px;
+}
+.dogPlayerTiles:nth-child(odd) {
+  background-color: #1e4775c0;
+  color: white;
+  margin: 25px;
+  text-align: center;
+  border-radius: 25px;
+}
+.dogPlayerTiles:nth-child(even) button {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+}
+.dogPlayerTiles:nth-child(odd) button {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.playerTileDetails {
+  font-size: large;
+  font-weight: 600;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.playerTilesButtons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-color: none;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dogPlayerTilebutton {
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* ! -------- SinglePlayer.jsx -------- */
+.SPPage {
+  /* display: flex; */
+  /* flex-direction: row; */
+  justify-content: center;
+  width: 100%;
+}
+.individualPlayerTileDetails {
+  background-color: #f6b40dc0;
+  color: black;
+  margin: 25px;
+  text-align: center;
+  border-radius: 25px;
+}
+.playerDetailsLayout {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+.playerDetailsBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 15px;
+  font-size: larger;
+}
+.playerName {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 10px;
+}
+.SPB {
+  margin-bottom: 5px;
+}
+.SPDetailTitles {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}
+h4 {
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}
+.SPButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.SPBColor {
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #1e4775ec;
+  color: #f6b40dec;
 }
 
-.card {
-  padding: 2em;
+/* ! -------- DeleteVerification.jsx -------- */
+.verificationMessage {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
 }
-
-.read-the-docs {
-  color: #888;
+.playerDetailsPhoto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.DVMessage {
+  font-size: 30px;
+  font-weight: bolder;
+  background-color: rgb(255, 0, 0);
+  color: black;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.DVBColor {
+  background-color: rgb(0, 255, 0);
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+.DVRBColor {
+  background-color: red;
+  color: black;
 }
