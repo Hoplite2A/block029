@@ -26,11 +26,12 @@ body {
 .newPlayerButton {
   background-color: #1e4775ec;
   color: #f6b40dec;
-  font-size: large;
   font-weight: bold;
 }
 .newPlayerButton {
-  font-size: medium;
+  font-size: 20px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 .allPlayerTilesDiv {
   display: flex;
@@ -49,6 +50,10 @@ body {
   margin: 25px;
   text-align: center;
   border-radius: 25px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .dogPlayerTiles:nth-child(odd) {
   background-color: #1e4775c0;
@@ -56,16 +61,21 @@ body {
   margin: 25px;
   text-align: center;
   border-radius: 25px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .dogPlayerTiles:nth-child(even) button {
   background-color: transparent;
-  color: rgb(0, 0, 0);
+  color: #1e4775e1;
+  font-size: 20px;
 }
 .dogPlayerTiles:nth-child(odd) button {
   background-color: transparent;
-  color: rgb(255, 255, 255);
+  color: #f6b40de1;
+  font-size: 20px;
 }
-
 .playerTileDetails {
   font-size: large;
   font-weight: 600;
@@ -165,4 +175,91 @@ h4 {
 .DVRBColor {
   background-color: red;
   color: black;
+}
+
+/* ! -------- MainAddition.jsx -------- */
+.MAPDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainAddition {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainAdditionInputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+label {
+  min-width: 275px;
+  text-align: center;
+}
+input {
+  min-width: 250px;
+  border-radius: 15px;
+  background-color: #1e4775c0;
+}
+.MAAPBDiv {
+  justify-content: center;
+}
+.MAAPButton {
+  text-align: center;
+}
+
+/* ! -------- DetailedAddition.jsx -------- */
+.mainAddition {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.DADiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f6b40dec;
+  border-radius: 25px;
+}
+.DASuccess {
+  margin-top: 0px;
+  padding: 10px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(0, 255, 0);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.DARedirect {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #1e4775c0;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+/* ! -------- DeletPlayer.jsx -------- */
+.DPMDiv1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.DPMDiv2 {
+  width: 80%;
+  border-radius: 25px;
+  background-color: #1e4775ec;
+}
+.DPMessage {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f6b40dec;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }

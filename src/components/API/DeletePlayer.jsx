@@ -25,10 +25,12 @@ export default function DeletePlayer() {
 
   return (
     <Link to="/">
-      <div className="DPMDiv">
-        <p className="DPMessage">
-          Player has been deleted. Click here to see all remaining players.
-        </p>
+      <div className='DPMDiv1'>
+        <div className="DPMDiv2">
+          <p className="DPMessage">
+            Player has been deleted. Click here to see all remaining players.
+          </p>
+        </div>
       </div>
     </Link>
   );
