@@ -182,17 +182,23 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #f6b40dec;
 }
 .mainAddition {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  align-content: center;
+  padding-bottom: 15px;
 }
 .mainAdditionInputs {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
+  padding-bottom: 15px;
 }
 label {
   min-width: 275px;
@@ -201,13 +207,26 @@ label {
 input {
   min-width: 250px;
   border-radius: 15px;
-  background-color: #1e4775c0;
+  background-color: #1e4775;
+}
+.MAButton {
+  background-color: rgb(0, 255, 0);
+  font-size: 20px;
+  font-weight: bolder;
+  color: black;
 }
 .MAAPBDiv {
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: black;
 }
 .MAAPButton {
   text-align: center;
+  background-color: #1e4775;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 /* ! -------- DetailedAddition.jsx -------- */

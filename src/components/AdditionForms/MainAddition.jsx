@@ -52,7 +52,7 @@ export default function MainAddition() {
                       />
               </label>
           </div>
-            <button type="submit">Create New Player</button>
+            <button className='MAButton' type="submit">Create New Player</button>
         </form>
         <div className="MAAPBDiv">
             <button className='MAAPButton' onClick={()=>navigate('/')}>Bring me back to all the players.</button>
