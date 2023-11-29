@@ -1,11 +1,13 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
-export default function DetailedAddition(newPlayerName, newPlayerBreed) {
-  console.log(newPlayerName);
-  console.log(newPlayerBreed);
+export default function DetailedAddition() {
 
-  useEffect(() => {
+  console.log('Rendering Detailed Addition');
+  const { breed, name } = useParams();
+
+  useEffect(() => { 
+    console.log('running use effect');
     async function postNewPlayer() {
       try {
         const res = await fetch(
@@ -16,28 +18,31 @@ export default function DetailedAddition(newPlayerName, newPlayerBreed) {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              name: {newPlayerName},
-              breed: {newPlayerBreed},
+              name,
+              breed,
             }),
           }
         );
-        const json = res.json();
+        const json = await res.json();
         console.log(json);
       } catch (err) {
-        console.error("Posting New Detailed Player Feailed", err);
+        console.error("Posting New Detailed Player Failed", err);
       }
     }
-    return () => postNewPlayer();
-  });
+    // return () => postNewPlayer();
+    postNewPlayer();
+  }, []);
 
   return (
-    <div className='DADiv'>
-      <p className='DASuccess'>Your new player has been successfully created!</p>
+    <div className="DADiv">
+      <p className="DASuccess">
+        Your new player has been successfully created!
+      </p>
       {/* <Link to='/PlayerTiles/{id}>
                 <h4>Click here to view their details.</h4>
             </Link> */}
       <Link to="/">
-        <p className='DARedirect'>Click here to go back to the main page.</p>
+        <p className="DARedirect">Click here to go back to the main page.</p>
       </Link>
     </div>
   );
