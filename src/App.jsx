@@ -15,7 +15,7 @@ export default function App() {
       <Route path='/deleteVerification/:id' element={<DeleteVerification />} />
       <Route path='/delete/:id' element={<DeletePlayer />} />
       <Route path='/mainAddition' element={<MainAddition />} />
-      <Route path='/detailedAddition/:breed/:name' element={<DetailedAddition />} />
+      <Route path='/detailedAddition/' element={<DetailedAddition />} />
     </Routes>
   );
 }

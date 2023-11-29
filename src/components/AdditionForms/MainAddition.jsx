@@ -7,15 +7,6 @@ export default function MainAddition() {
   const [newPlayerBreed, setNewPlayerBreed] = useState("");
   const navigate = useNavigate();
 
-  //   const handleNameChange = (e) => {
-  //       console.log(e.target.value);
-  //     setNewPlayerName(e.target.value);
-  //   };
-  //   const handleBreedChange = (e) => {
-  //       console.log(e.target.value);
-  //       setNewPlayerBreed(e.target.value);
-  //   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -37,7 +28,7 @@ export default function MainAddition() {
     } catch (err) {
       console.error("Posting New Detailed Player Failed", err);
     }
-    navigate(`/detailedAddition/${newPlayerBreed}/${newPlayerName}`);
+    navigate('/detailedAddition');
   };
 
   return (
